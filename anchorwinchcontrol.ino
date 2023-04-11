@@ -85,7 +85,7 @@ void down()
 		digitalWrite(downLED, HIGH);
 	}
 
-  	/* Change state to HOIST if button is pressed or when RC pulsewidth goes above 1990 milliseconds */
+  	/* Change state to HOIST if button is pressed or when RC pulsewidth goes above 1800 milliseconds */
 	if (digitalRead(stateBtn) == HIGH || pulseIn(rcRxPin, HIGH) > 1800) {
 		state = HOIST;
 	}
